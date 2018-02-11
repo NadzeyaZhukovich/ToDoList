@@ -1,0 +1,38 @@
+header{
+    width:980px;
+    margin: 0 auto;
+}
+
+.ToDoList{
+    width: 980px;
+    margin: 0 auto;
+}
+
+form{
+    display: flex;
+    margin: 1%;
+}
+
+input{
+    padding: 5px;
+    margin-right: 1%;
+    width: 50%;
+}
+
+button{
+    padding: 5px;
+    border: 1px solid #000000;
+    background-color: #174BEB;
+    font-family: Courier New, Courier, monospace;
+    color: #FA8A10;
+    font-weight: bold;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 1%;
+    text-transform: capitalize;
+}
+
+
