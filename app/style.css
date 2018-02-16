@@ -28,11 +28,27 @@ button{
     font-weight: bold;
 }
 
+.DeleteButton {
+    background-color: rgb(161, 22, 41);
+    color: #fff;
+    /* float: right; */
+}
+
 ul{
     list-style-type: none;
     padding: 0px;
     margin: 1%;
     text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
 }
 
 
