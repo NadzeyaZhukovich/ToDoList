@@ -17,14 +17,18 @@ document.getElementById("button").addEventListener("click", function(){
 function showTask(list, task) {
     var item = document.createElement("li");
     item.setAttribute('id', 'task'+tasks.length);
+    item.appendChild(document.createTextNode(task));
+    item.appendChild(createRemoveButton());
+    list.appendChild(item);
+}
+
+function createRemoveButton(){
     var removeButton = document.createElement("button");
     removeButton.innerHTML = "delete";
-    removeButton.className = "DeleteButton";
+    removeButton.setAttribute('class', 'DeleteButton');
     removeButton.setAttribute('onClick', 'remove("' + 'task'+tasks.length+'")');
-    removeButton.type = "button";
-    item.appendChild(document.createTextNode(task));
-    item.appendChild(removeButton);
-    list.appendChild(item);
+    removeButton.setAttribute('type', 'button');
+    return removeButton;
 }
 
 function remove(id) {
