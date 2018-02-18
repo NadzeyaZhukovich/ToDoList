@@ -17,9 +17,18 @@ document.getElementById("button").addEventListener("click", function(){
 function showTask(list, task) {
     var item = document.createElement("li");
     item.setAttribute('id', 'task'+tasks.length);
+    item.appendChild(createCheckbox());
     item.appendChild(document.createTextNode(task));
     item.appendChild(createRemoveButton());
     list.appendChild(item);
+}
+
+function createCheckbox(){
+    var checkbox = document.createElement("input");
+    checkbox.setAttribute('type', 'checkbox');
+    checkbox.setAttribute('class', 'checkboxStyle');
+    checkbox.setAttribute('onChange', 'change(this)');
+    return checkbox;
 }
 
 function createRemoveButton(){
@@ -34,4 +43,8 @@ function createRemoveButton(){
 function remove(id) {
     var item = document.getElementById(id);
     list.removeChild(item);
+}
+
+function change(target) {
+    alert(target.checked);
 }

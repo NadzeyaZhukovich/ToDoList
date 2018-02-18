@@ -13,7 +13,7 @@ form{
     margin: 1%;
 }
 
-input{
+.inputStyle{
     padding: 5px;
     margin-right: 1%;
     width: 50%;
@@ -31,7 +31,7 @@ button{
 .DeleteButton {
     background-color: rgb(161, 22, 41);
     color: #fff;
-    /* float: right; */
+    float: right;
 }
 
 ul{
@@ -39,16 +39,10 @@ ul{
     padding: 0px;
     margin: 1%;
     text-transform: capitalize;
-    display: flex;
-    flex-direction: column;
-
 }
 
-li{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-
+.checkboxStyle{
+    margin-right: 15px;
 }
 
 
