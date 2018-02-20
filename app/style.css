@@ -45,4 +45,11 @@ ul{
     margin-right: 15px;
 }
 
+.textStyle{
+    text-decoration: line-through;
+    color: rgb(138, 141, 148);
+}
 
+li{
+    margin-top: 40px;
+}

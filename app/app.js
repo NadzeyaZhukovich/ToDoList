@@ -1,4 +1,4 @@
-var tasks = ["first"];
+var tasks = ["finish ToDo project"];
 var list = document.getElementById("list");
 
 window.addEventListener("load", function(){
@@ -18,14 +18,22 @@ function showTask(list, task) {
     var item = document.createElement("li");
     item.setAttribute('id', 'task'+tasks.length);
     item.appendChild(createCheckbox());
-    item.appendChild(document.createTextNode(task));
+    item.appendChild(createText(task));
     item.appendChild(createRemoveButton());
     list.appendChild(item);
+}
+
+function createText(task){
+    var text = document.createElement("spun");
+    text.appendChild(document.createTextNode(task));
+    text.setAttribute('id', 'task'+tasks.length + '_text');
+    return text;
 }
 
 function createCheckbox(){
     var checkbox = document.createElement("input");
     checkbox.setAttribute('type', 'checkbox');
+    checkbox.setAttribute('id', 'task'+tasks.length + '_checkbox');
     checkbox.setAttribute('class', 'checkboxStyle');
     checkbox.setAttribute('onChange', 'change(this)');
     return checkbox;
@@ -34,6 +42,7 @@ function createCheckbox(){
 function createRemoveButton(){
     var removeButton = document.createElement("button");
     removeButton.innerHTML = "delete";
+    removeButton.setAttribute('id', 'task'+tasks.length + '_removeButton');
     removeButton.setAttribute('class', 'DeleteButton');
     removeButton.setAttribute('onClick', 'remove("' + 'task'+tasks.length+'")');
     removeButton.setAttribute('type', 'button');
@@ -46,5 +55,12 @@ function remove(id) {
 }
 
 function change(target) {
-    alert(target.checked);
+    var checkboxId = target.id;
+    var textId = checkboxId.replace('checkbox', 'text');
+    var textHtml = document.getElementById(textId);
+    if (target.checked == true) {
+        textHtml.setAttribute('class', 'textStyle');
+    } else {
+        textHtml.removeAttribute('class');
+    }
 }
