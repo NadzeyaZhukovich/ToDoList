@@ -3,7 +3,7 @@ header{
     margin: 0 auto;
 }
 
-.ToDoList{
+.toDoList{
     width: 980px;
     margin: 0 auto;
 }
@@ -21,16 +21,16 @@ form{
 
 button{
     padding: 5px;
-    border: 1px solid #000000;
-    background-color: #174BEB;
+    border: 1px solid rgb(0,0,0);
+    background-color: rgb(23, 75, 235);
     font-family: Courier New, Courier, monospace;
-    color: #FA8A10;
+    color: rgb(250, 138, 16);
     font-weight: bold;
 }
 
-.DeleteButton {
+.deleteButton {
     background-color: rgb(161, 22, 41);
-    color: #fff;
+    color: rgb(255, 255, 255);
     float: right;
 }
 

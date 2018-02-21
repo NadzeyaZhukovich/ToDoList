@@ -43,7 +43,7 @@ function createRemoveButton(){
     var removeButton = document.createElement("button");
     removeButton.innerHTML = "delete";
     removeButton.setAttribute('id', 'task'+tasks.length + '_removeButton');
-    removeButton.setAttribute('class', 'DeleteButton');
+    removeButton.setAttribute('class', 'deleteButton');
     removeButton.setAttribute('onClick', 'remove("' + 'task'+tasks.length+'")');
     removeButton.setAttribute('type', 'button');
     return removeButton;
